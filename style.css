@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: #f0f0f0;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav {
+  display: flex; /* Flexbox for nav */
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Grid Layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Content + sidebar */
+  gap: 1rem;
+  margin: 1rem;
+}
+
+/* Content Area */
+.content {
+  background-color: #fff;
+  padding: 1rem;
+  border: 2px solid #ccc;
+}
+
+/* Flexbox for Cards inside Content */
+.cards {
+  display: flex;             /* Flexbox row layout */
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;           /* Wrap cards on small screens */
+}
+
+.card {
+  background-color: lightblue;
+  padding: 1rem;
+  flex: 1 1 30%;             /* 3 cards per row */
+  border: 2px solid black;
+  text-align: center;
+}
+
+/* Box Model Demo */
+.box-demo {
+  background-color: lightgreen;   /* Padding area */
+  padding: 20px;                  /* Inside space */
+  border: 10px solid yellow;      /* Border */
+  margin: 30px;                    /* Outside space */
+  text-align: center;
+  font-weight: bold;
+
+  /* Outline for extra visibility */
+  outline: 3px dashed purple;
+  outline-offset: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: lightgreen;
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr; /* Stack content + sidebar */
+  }
+
+  .card {
+    flex: 1 1 45%; /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* 1 card per row */
+  }
+
+  .nav {
+    flex-direction: column; /* Stack nav links */
+    gap: 0.5rem;
+  }
+}
